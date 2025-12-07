@@ -1,0 +1,109 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars since canvas covers screen */
+  background-color: #1a1a1a;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Popup Styles */
+.hidden {
+  display: none !important;
+}
+
+#popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Ensure it sits on top of canvas */
+}
+
+#popup-content {
+  width: 80%;
+  height: 80%;
+  max-width: 800px; /* Don't get too wide on large screens */
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  padding: 20px; /* Add global padding to container */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+#close-btn:hover {
+  color: #000;
+}
+
+/* Start Screen Styles */
+#start-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200; /* Higher than popup */
+}
+
+#start-content {
+  max-width: 600px;
+  text-align: center;
+  padding: 40px;
+}
+
+#start-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #e6c288; /* Match wall color theme */
+}
+
+#enter-btn {
+  background-color: #e6c288;
+  color: #1a1a1a;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#enter-btn:hover {
+  background-color: #d4af37;
+  transform: scale(1.05);
+}
+
