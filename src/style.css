@@ -107,3 +107,71 @@ body {
   transform: scale(1.05);
 }
 
+/* Sources UI */
+#sources-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  border: 1px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 150;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+#sources-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+#sources-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300; /* Higher than start screen if needed */
+}
+
+#sources-content {
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+#sources-text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+#sources-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+#sources-close-btn:hover {
+  color: #000;
+}
+

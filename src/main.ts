@@ -8,6 +8,7 @@ import chinText from './content/vincent_chin.txt?raw';
 import maskText from './content/covid_mask.txt?raw';
 import posterText from './content/anti_immigration_poster.txt?raw';
 import openingText from './content/opening.txt?raw';
+import sourcesText from './content/sources.txt?raw';
 
 // --- Scene Setup ---
 const scene = new THREE.Scene();
@@ -783,6 +784,24 @@ enterBtn?.addEventListener('click', () => {
 const popup = document.getElementById('popup');
 const closeBtn = document.getElementById('close-btn');
 const popupContainer = document.getElementById('popup-3d-container');
+
+// Sources Logic
+const sourcesBtn = document.getElementById('sources-btn');
+const sourcesPopup = document.getElementById('sources-popup');
+const sourcesCloseBtn = document.getElementById('sources-close-btn');
+const sourcesTextEl = document.getElementById('sources-text');
+
+if (sourcesTextEl) {
+    sourcesTextEl.innerText = sourcesText;
+}
+
+sourcesBtn?.addEventListener('click', () => {
+    sourcesPopup?.classList.remove('hidden');
+});
+
+sourcesCloseBtn?.addEventListener('click', () => {
+    sourcesPopup?.classList.add('hidden');
+});
 
 // Popup 3D Scene Setup
 const popupScene = new THREE.Scene();
